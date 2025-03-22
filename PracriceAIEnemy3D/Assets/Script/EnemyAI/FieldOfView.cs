@@ -8,17 +8,12 @@ public class FieldOfView : MonoBehaviour
     public float radius;
     [Range(0, 360)]
     public float angle;
-
-    public GameObject playerRef;
-
     public LayerMask targetMask;
     public LayerMask obstructionMask;
-
     public bool canSeePlayer;
 
     private void Start()
     {
-        playerRef = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVRoutine());
     }
 
